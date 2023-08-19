@@ -1,3 +1,14 @@
+# schema.yml
+# Dbt Demo: Jaffle Shop
+#
+# Copyright © 2023 Dagitali LLC. All rights reserved.
+#
+# A dbt data model configuration file. Declares this dbt project's staging-layer
+# Jaffle Shop data models.
+#
+# REFERENCES:
+# 1. https://docs.getdbt.com/docs/build/models
+# 2. https://docs.getdbt.com/reference/model-properties
 
 version: 2
 

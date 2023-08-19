@@ -58,7 +58,7 @@ beef stew with melted cheese.
 
 ### System Requirements
 
-Dbt Demo supports UNIX-flavored operating systems, including:
+Dbt Demo supports UNIX-like operating systems, including:
 
 - [Linux][Linux]
 - [macOS][macOS]
@@ -76,9 +76,9 @@ system:
 To contribute to Dbt Demo's development and maintenance, the following [DevOps][DevOps]
 [toolchain][toolchain] must also be installed:
 
-- [Git][Git] 2.24.1 or higher
+- [Git][Git] 2.39.2 or higher
 - [GitFlow][GitFlow] 0.4.1 or higher
-- [pre-commit][pre-commit] v2.13.0 or higher
+- [pre-commit][pre-commit] 3.3.3 or higher
 
 ### Usage
 
@@ -149,7 +149,6 @@ this assignment possible. See [REFERENCES.md](REFERENCES.md) for a list of some.
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [Python]: https://www.python.org
 [seeds]: https://docs.getdbt.com/docs/building-a-dbt-project/seeds
-[SunOS]: https://en.wikipedia.org/wiki/SunOS
 [toolchain]: https://en.wikipedia.org/wiki/Toolchain
 [tutorial]: https://docs.getdbt.com/tutorial/setting-up
 [Windows]: https://www.microsoft.com/en-us/windows

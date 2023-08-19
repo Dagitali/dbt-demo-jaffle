@@ -1,3 +1,21 @@
+# dbt_project.yml
+# Dbt Demo: Jaffle Shop
+#
+# Copyright © 2023 Dagitali LLC. All rights reserved.
+#
+# The dbt project configuration file. Identifies its parent directory as the
+# root of a dbt project. Specifies how dbt operates on said project.
+#
+# REFERENCES:
+# 1. https://docs.getdbt.com/blog/how-to-design-and-structure-metrics
+# 2. https://docs.getdbt.com/docs/build/projects
+# 3. https://docs.getdbt.com/guides/best-practices/how-we-structure/5-the-rest-of-the-project
+# 4. https://docs.getdbt.com/reference/dbt_project.yml
+# 5. https://github.com/dbt-labs/dbt-databricks-demo
+# 6. https://github.com/dbt-labs/jaffle_shop
+# 7. https://github.com/dbt-labs/jaffle_shop_metrics
+# 8. https://github.com/dbt-labs/jaffle-shop-template
+
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
@@ -18,7 +36,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-clean-targets: # directories to be removed by `dbt clean`
+clean-targets: # Directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 

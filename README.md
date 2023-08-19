@@ -7,8 +7,9 @@ e-commerce source.
 
 Dbt Demo is an example of a software project that uses the [command-line
 interface (CLI)][CLI] tool [`dbt`][dbt] to transform raw data into analytics-ready data
-models. It will iteratively evolved to depict what a dbt could look like for a
-fictional e-commerce business: Jaffle Shop.
+models. It began at version v0.1.0 with a set of starter files generated using
+the command `dbt init`. It will iteratively evolve to depict what a dbt project
+could look like for a fictional e-commerce business: Jaffle Shop.
 
 ### What is This Repo?
 

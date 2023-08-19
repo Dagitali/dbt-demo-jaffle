@@ -12,9 +12,12 @@
 # with trivial style nitpicks.
 #
 # REFERENCES:
-# 1. https://pre-commit.com
-# 2. https://pre-commit.com/hooks.html
-# 3. https://pre-commit.com/index.html#plugins
+# 1. https://docs.getdbt.com/blog/enforcing-rules-pre-commit-dbt
+# 2. https://github.com/dbt-labs/jaffle-shop-template/blob/main/.pre-commit-config.yaml
+# 3. https://blog.montrealanalytics.com/automating-dbt-development-workflows-with-pre-commit-b6c7ca708f7
+# 4. https://pre-commit.com
+# 5. https://pre-commit.com/hooks.html
+# 6. https://pre-commit.com/index.html#plugins
 
 # All commands by default will run on every commit
 default_install_hook_types:
@@ -87,3 +90,46 @@ repos:
       # - id: requirements-txt-fixer
       # - id: sort-simple-yaml
       - id: trailing-whitespace
+
+  ### Dbt ###
+
+  - repo: https://github.com/dbt-checkpoint/dbt-checkpoint
+    rev: v1.1.0
+    hooks:
+      - id: dbt-docs-generate
+      - id: check-model-has-properties-file
+        name: Check that all models are listed in a YAML file
+        files: ^models/
+      - id: check-model-has-tests
+        name: Check that all models have tests
+        files: ^models/
+
+  ### Markdown ###
+
+  # - repo: https://github.com/frnmst/md-toc
+  #   rev: 8.1.9
+  #   hooks:
+  #     - id: md-toc
+
+  ### Python ###
+
+  # - repo: https://github.com/asottile/add-trailing-comma
+  #   rev: v2.4.0
+  #   hooks:
+  #     - id: add-trailing-comma
+  #       args: [--py36-plus]
+
+  ### SQL ###
+
+  # - repo: https://github.com/sqlfluff/sqlfluff
+  #   rev: 2.1.0
+  #   hooks:
+  #     - id: sqlfluff-lint
+  #       # For dbt projects, this installs the dbt "extras".
+  #       # You will need to select the relevant dbt adapter for your dialect
+  #       # (https://docs.getdbt.com/docs/available-adapters):
+  #       additional_dependencies: ['dbt-postgres', 'sqlfluff-templater-dbt']
+  #     - id: sqlfluff-fix
+  #       # Arbitrary arguments to show an example
+  #       # args: [--rules, "L003,L014"]
+  #       additional_dependencies: ['dbt-postgres', 'sqlfluff-templater-dbt']
